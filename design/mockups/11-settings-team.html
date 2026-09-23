@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vérité — Settings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#12151B; --paper:#EDE7D9; --signal:#C1272D; --brass:#B08D57; }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--ink); color:var(--paper); font-family:'Inter',sans-serif;}
+  .app{display:grid; grid-template-columns:200px 1fr; min-height:100vh;}
+  .rail{border-right:1px solid #262b35; padding:28px 20px;}
+  .tab{padding:10px 12px; border-radius:3px; font-size:14px; border-left:2px solid transparent; color:#c9cdd6; margin-bottom:4px;}
+  .tab.active{border-left-color:var(--brass); color:var(--paper); background:#1a1e26;}
+  main{padding:40px 48px; max-width:560px;}
+  .title{font-family:'Fraunces',serif; font-weight:700; font-size:26px; margin:0 0 26px;}
+  .row{display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid #262b35;}
+  .name{font-size:14px;}
+  .email{font-size:12px; color:#8a90a0;}
+  .role{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--brass); border:1px solid var(--brass); padding:3px 9px; border-radius:3px;}
+  .invite{display:flex; gap:8px; margin-top:22px;}
+  .invite input{flex:1; padding:11px 12px; background:#181c24; border:1px solid #262b35; border-radius:3px; color:var(--paper); font-size:13.5px;}
+  .invite button{background:var(--signal); color:var(--paper); border:none; padding:0 18px; font-weight:600; font-size:12.5px; border-radius:3px;}
+  .api-box{background:#181c24; border:1px solid #262b35; border-radius:4px; padding:16px 18px; margin-top:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#9aa0ac; line-height:2;}
+  .api-box b{color:var(--paper);}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="rail">
+    <div class="tab">Workspace</div>
+    <div class="tab active">Team</div>
+    <div class="tab">API</div>
+  </div>
+  <main>
+    <div class="title">Team</div>
+    <div class="row">
+      <div><div class="name">Dana Wallace</div><div class="email">dana@northwindpictures.com</div></div>
+      <span class="role">OWNER</span>
+    </div>
+    <div class="row">
+      <div><div class="name">Marcus Reyes</div><div class="email">marcus@northwindpictures.com</div></div>
+      <span class="role">EDITOR</span>
+    </div>
+    <div class="row">
+      <div><div class="name">Priya Shah</div><div class="email">priya@northwindpictures.com — pending</div></div>
+      <span class="role">VIEWER</span>
+    </div>
+    <div class="invite">
+      <input type="text" placeholder="Invite by email">
+      <button>Send invite</button>
+    </div>
+  </main>
+</div>
+</body>
+</html>

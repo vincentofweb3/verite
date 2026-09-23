@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vérité — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12151B; --paper:#EDE7D9; --signal:#C1272D; --brass:#B08D57;
+    --slate:#3C4551; --verified:#4F7942;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--ink); color:var(--paper); font-family:'Inter',sans-serif;}
+  .app{display:grid; grid-template-columns:220px 1fr; min-height:100vh;}
+  .rail{border-right:1px solid #262b35; padding:28px 20px; display:flex; flex-direction:column; gap:28px;}
+  .workspace{font-family:'Fraunces',serif; font-weight:600; font-size:19px; letter-spacing:.02em;}
+  .rail-label{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#8a90a0; margin-bottom:10px;}
+  .can{padding:10px 12px; border-radius:3px; font-size:14px; border-left:2px solid transparent; color:#c9cdd6; cursor:pointer;}
+  .can.active{border-left-color:var(--brass); color:var(--paper); background:#1a1e26;}
+  .new-btn{margin-top:auto; background:var(--signal); color:var(--paper); border:none; padding:12px 14px; font-family:'Inter'; font-weight:600; font-size:13px; letter-spacing:.04em; text-transform:uppercase; border-radius:3px; cursor:pointer;}
+  main{padding:40px 48px;}
+  .page-title{font-family:'Fraunces',serif; font-weight:700; font-size:32px; margin:0 0 4px;}
+  .page-sub{color:#9aa0ac; font-size:14px; margin:0 0 34px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:20px;}
+  .card{background:#181c24; border:1px solid #262b35; border-radius:4px; padding:20px; position:relative; transition:border-color .15s;}
+  .card:hover{border-color:var(--brass);}
+  .card::before{content:""; position:absolute; top:0; left:20px; right:20px; height:6px; background:var(--brass); opacity:.55; border-radius:0 0 2px 2px;}
+  .card-title{font-family:'Fraunces',serif; font-weight:600; font-size:18px; margin:10px 0 6px;}
+  .card-meta{font-family:'JetBrains Mono',monospace; font-size:11px; color:#8a90a0; margin-bottom:14px;}
+  .status-row{display:flex; align-items:center; justify-content:space-between;}
+  .status{font-size:12px; padding:4px 8px; border-radius:2px; font-weight:600; letter-spacing:.03em;}
+  .status.ready{background:rgba(79,121,66,.18); color:#8fbf7d; border:1px solid rgba(79,121,66,.4);}
+  .status.processing{background:rgba(176,141,87,.18); color:var(--brass); border:1px solid rgba(176,141,87,.4);}
+  .flag-badge{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--signal); border:1px solid var(--signal); padding:2px 6px; border-radius:2px;}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="rail">
+    <div class="workspace">Northwind Pictures</div>
+    <div>
+      <div class="rail-label">Workspace</div>
+      <div class="can active">Projects</div>
+      <div class="can">Settings</div>
+    </div>
+    <button class="new-btn">+ New Project</button>
+  </div>
+  <main>
+    <h1 class="page-title">Projects</h1>
+    <p class="page-sub">6 scripts · 3 with unresolved flags</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-title">Midnight in Halcyon</div>
+        <div class="card-meta">108 pages · updated 2h ago</div>
+        <div class="status-row">
+          <span class="status ready">Story Bible Ready</span>
+          <span class="flag-badge">3 flags</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">The Long Reel</div>
+        <div class="card-meta">94 pages · updated yesterday</div>
+        <div class="status-row">
+          <span class="status ready">Story Bible Ready</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Blue Hour Static</div>
+        <div class="card-meta">62 pages · updated 3 days ago</div>
+        <div class="status-row">
+          <span class="status processing">Processing…</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Continental Divide</div>
+        <div class="card-meta">121 pages · updated 4 days ago</div>
+        <div class="status-row">
+          <span class="status ready">Story Bible Ready</span>
+          <span class="flag-badge">1 flag</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

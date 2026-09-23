@@ -1,0 +1,29 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: verite
+  annotations:
+    run.googleapis.com/ingress: all
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: "3"
+    spec:
+      containers:
+        - image: REGION-docker.pkg.dev/PROJECT_ID/verite/verite:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: AUTH_MODE
+              value: firebase
+            - name: GCP_PROJECT_ID
+              value: PROJECT_ID
+            - name: GCS_BUCKET
+              value: SCRIPT_BUCKET
+            - name: FIREBASE_WEB_CONFIG
+              value: '{}'
+          resources:
+            limits:
+              cpu: "1"
+              memory: 512Mi

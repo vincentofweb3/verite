@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vérité — Scene 14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#12151B; --paper:#EDE7D9; --signal:#C1272D; --brass:#B08D57; --slate:#3C4551; --verified:#4F7942; }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--ink); color:var(--paper); font-family:'Inter',sans-serif;}
+  .app{display:grid; grid-template-columns:1fr 360px; min-height:100vh;}
+  main{padding:44px 56px;}
+  .slug{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.08em; color:var(--brass); text-transform:uppercase; margin-bottom:8px;}
+  .title{font-family:'Fraunces',serif; font-weight:700; font-size:28px; margin:0 0 22px;}
+  .scene-text{background:#181c24; border:1px solid #262b35; border-radius:4px; padding:26px 28px; font-size:15px; line-height:1.85; color:#d8d3c5; margin-bottom:32px;}
+  .flag-inline{border-bottom:2px solid var(--signal); cursor:pointer;}
+  .claims-label{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#8a90a0; margin-bottom:14px;}
+  .claim{border:1px solid #262b35; border-radius:4px; padding:16px 18px; margin-bottom:12px; background:#14181f;}
+  .claim.active{border-color:var(--signal);}
+  .claim-top{display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;}
+  .claim-text{font-size:14px; color:#d8d3c5;}
+  .stamp{display:inline-block; border:2px solid; border-radius:3px; padding:2px 9px; font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:.05em; transform:rotate(-3deg);}
+  .stamp.flagged{color:var(--signal); border-color:var(--signal);}
+  .stamp.verified{color:#8fbf7d; border-color:#8fbf7d;}
+  aside{border-left:1px solid #262b35; padding:44px 28px;}
+  .feed-label{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#8a90a0; margin-bottom:6px;}
+  .feed-claim{font-size:13px; color:#9aa0ac; margin-bottom:20px; padding-bottom:16px; border-bottom:1px dashed #262b35;}
+  .source{margin-bottom:16px;}
+  .source-title{font-size:13px; color:var(--paper); margin-bottom:2px;}
+  .source-meta{font-family:'JetBrains Mono',monospace; font-size:11px; color:#6b7280;}
+  .source-excerpt{font-family:'JetBrains Mono',monospace; font-size:11px; color:#8a90a0; margin-top:4px; line-height:1.6;}
+  .recheck{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--brass); border:1px solid var(--brass); padding:5px 10px; border-radius:3px; display:inline-block; margin-top:8px; cursor:pointer;}
+</style>
+</head>
+<body>
+<div class="app">
+  <main>
+    <div class="slug">INT. WALLACE APARTMENT — NIGHT</div>
+    <h1 class="title">Scene 14</h1>
+    <div class="scene-text">
+      Dana paces by the window, phone pressed to her ear. Outside, rain streaks the glass.
+      <br><br>
+      DANA: I called him from the car — <span class="flag-inline">on the car phone</span>, mind you, the one Marcus installed himself — and he still didn't pick up.
+    </div>
+
+    <div class="claims-label">Claims in this scene</div>
+
+    <div class="claim active">
+      <div class="claim-top">
+        <span class="claim-text">"Car phone" self-installed by a character, set in 1987</span>
+        <span class="stamp flagged">✕ FLAGGED</span>
+      </div>
+      <div class="recheck">↻ Re-check this claim</div>
+    </div>
+
+    <div class="claim">
+      <div class="claim-top">
+        <span class="claim-text">Apartment building described as "prewar walk-up" in NYC's Lower East Side</span>
+        <span class="stamp verified">✓ VERIFIED</span>
+      </div>
+    </div>
+  </main>
+  <aside>
+    <div class="feed-label">Wire Feed</div>
+    <div class="feed-claim">Sources for: "car phone" self-installed, 1987</div>
+
+    <div class="source">
+      <div class="source-title">Mobile Telephone Service — Historical Overview</div>
+      <div class="source-meta">telecomhistory.org · retrieved 09:14:11</div>
+      <div class="source-excerpt">"...consumer car-phone units in 1987 required licensed installation by a carrier-authorized technician; self-installation was not..."</div>
+    </div>
+
+    <div class="source">
+      <div class="source-title">FCC Archive: Cellular Service Rules, 1980s</div>
+      <div class="source-meta">fcc.gov/archive · retrieved 09:14:11</div>
+      <div class="source-excerpt">"...equipment had to be certified and installed per Part 22 rules..."</div>
+    </div>
+  </aside>
+</div>
+</body>
+</html>

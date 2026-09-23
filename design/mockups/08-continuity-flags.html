@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vérité — Continuity Flags</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#12151B; --paper:#EDE7D9; --signal:#C1272D; --brass:#B08D57; --verified:#4F7942; }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--ink); color:var(--paper); font-family:'Inter',sans-serif; padding:44px 56px;}
+  .title{font-family:'Fraunces',serif; font-weight:700; font-size:28px; margin:0 0 6px;}
+  .sub{color:#9aa0ac; font-size:14px; margin:0 0 30px;}
+  .row{display:flex; align-items:center; gap:18px; background:#181c24; border:1px solid #262b35; border-left:3px solid var(--signal); border-radius:4px; padding:16px 20px; margin-bottom:12px;}
+  .row.med{border-left-color:var(--brass);}
+  .sev{font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:.06em; color:var(--signal); width:50px;}
+  .row.med .sev{color:var(--brass);}
+  .desc{flex:1; font-size:14px; color:#d8d3c5;}
+  .scenes{display:flex; gap:6px;}
+  .scene-chip{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--paper); background:#0d1015; border:1px solid #3c4551; padding:3px 9px; border-radius:3px;}
+  .ack{font-family:'JetBrains Mono',monospace; font-size:11px; color:#6b7280; border:1px solid #3c4551; padding:5px 10px; border-radius:3px;}
+</style>
+</head>
+<body>
+<div class="title">Continuity Flags</div>
+<div class="sub">3 issues across 42 scenes, ranked by production risk</div>
+
+<div class="row">
+  <div class="sev">HIGH</div>
+  <div class="desc">Silver lighter appears in scene 12, referenced again in scene 40 with no scene establishing its loss or return.</div>
+  <div class="scenes"><span class="scene-chip">SC 12</span><span class="scene-chip">SC 40</span></div>
+  <div class="ack">Acknowledge</div>
+</div>
+
+<div class="row med">
+  <div class="sev">MED</div>
+  <div class="desc">Dana's stated age in scene 3 ("thirty-one") is inconsistent with the 1987 birthdate referenced in scene 22.</div>
+  <div class="scenes"><span class="scene-chip">SC 3</span><span class="scene-chip">SC 22</span></div>
+  <div class="ack">Acknowledge</div>
+</div>
+
+<div class="row med">
+  <div class="sev">MED</div>
+  <div class="desc">Rain is established as ongoing in scene 14, but scene 15 (same night, different location) shows clear skies.</div>
+  <div class="scenes"><span class="scene-chip">SC 14</span><span class="scene-chip">SC 15</span></div>
+  <div class="ack">Acknowledge</div>
+</div>
+</body>
+</html>

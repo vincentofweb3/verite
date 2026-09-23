@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vérité — Story Bible</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#12151B; --paper:#EDE7D9; --signal:#C1272D; --brass:#B08D57; --slate:#3C4551; --verified:#4F7942; }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--ink); color:var(--paper); font-family:'Inter',sans-serif;}
+  .app{display:grid; grid-template-columns:200px 1fr; min-height:100vh;}
+  .rail{border-right:1px solid #262b35; padding:28px 20px;}
+  .tab{padding:10px 12px; border-radius:3px; font-size:14px; border-left:2px solid transparent; color:#c9cdd6; margin-bottom:4px;}
+  .tab.active{border-left-color:var(--brass); color:var(--paper); background:#1a1e26;}
+  main{padding:40px 48px;}
+  .title{font-family:'Fraunces',serif; font-weight:700; font-size:28px; margin:0 0 18px;}
+  .stats{display:flex; gap:32px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#9aa0ac; margin-bottom:8px; padding-bottom:22px; border-bottom:1px solid #262b35;}
+  .stats b{color:var(--paper); font-size:15px; display:block; margin-bottom:2px;}
+  .filmstrip{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; margin-top:26px;}
+  .frame{background:#181c24; border:1px solid #262b35; border-radius:4px; padding:16px; position:relative;}
+  .frame::before,.frame::after{content:""; position:absolute; top:0; bottom:0; width:6px; background:repeating-linear-gradient(180deg,#3c4551 0 4px, transparent 4px 10px);}
+  .frame::before{left:0;} .frame::after{right:0;}
+  .slug{font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--brass); text-transform:uppercase; margin-bottom:6px;}
+  .synopsis{font-size:13px; color:#d8d3c5; line-height:1.5; margin-bottom:10px; min-height:36px;}
+  .chips{display:flex; flex-wrap:wrap; gap:5px; margin-bottom:10px;}
+  .chip{font-size:10.5px; background:#0d1015; border:1px solid #3c4551; color:#9aa0ac; padding:2px 7px; border-radius:10px;}
+  .mini-stamp{display:inline-block; border:1.5px solid; border-radius:3px; padding:1px 7px; font-family:'JetBrains Mono',monospace; font-size:9.5px; font-weight:600; transform:rotate(-3deg);}
+  .mini-stamp.flagged{color:var(--signal); border-color:var(--signal);}
+  .mini-stamp.verified{color:#8fbf7d; border-color:#8fbf7d;}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="rail">
+    <div class="tab active">Scenes</div>
+    <div class="tab">Characters</div>
+    <div class="tab">Locations</div>
+    <div class="tab">Props</div>
+  </div>
+  <main>
+    <div class="title">Story Bible — Midnight in Halcyon</div>
+    <div class="stats">
+      <div><b>42</b>scenes</div>
+      <div><b>27</b>claims checked</div>
+      <div><b>24</b>verified</div>
+      <div><b>3</b>flagged</div>
+    </div>
+    <div class="filmstrip">
+      <div class="frame">
+        <div class="slug">Int. Wallace Apt — Night</div>
+        <div class="synopsis">Dana calls Marcus from the car phone, no answer.</div>
+        <div class="chips"><span class="chip">Dana</span><span class="chip">car phone</span></div>
+        <span class="mini-stamp flagged">✕ FLAGGED</span>
+      </div>
+      <div class="frame">
+        <div class="slug">Ext. Lower East Side — Dusk</div>
+        <div class="synopsis">Marcus walks past the prewar walk-up, hesitates.</div>
+        <div class="chips"><span class="chip">Marcus</span><span class="chip">apartment</span></div>
+        <span class="mini-stamp verified">✓ VERIFIED</span>
+      </div>
+      <div class="frame">
+        <div class="slug">Int. Diner — Morning</div>
+        <div class="synopsis">Dana and Reyes go over the case file.</div>
+        <div class="chips"><span class="chip">Dana</span><span class="chip">Reyes</span></div>
+        <span class="mini-stamp verified">✓ VERIFIED</span>
+      </div>
+      <div class="frame">
+        <div class="slug">Int. Airport Cockpit — Day</div>
+        <div class="synopsis">Two-person crew prepares for departure.</div>
+        <div class="chips"><span class="chip">crew size</span></div>
+        <span class="mini-stamp verified">✓ VERIFIED</span>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

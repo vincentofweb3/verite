@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vérité — New Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#12151B; --paper:#EDE7D9; --signal:#C1272D; --brass:#B08D57; --slate:#3C4551; --verified:#4F7942; }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--ink); color:var(--paper); font-family:'Inter',sans-serif; display:flex; align-items:center; justify-content:center; min-height:100vh;}
+  .wrap{width:480px;}
+  .title{font-family:'Fraunces',serif; font-weight:700; font-size:26px; margin:0 0 30px; text-align:center;}
+  label{display:block; font-size:12px; color:#9aa0ac; margin-bottom:6px; font-weight:600; text-transform:uppercase; letter-spacing:.05em;}
+  input[type=text]{width:100%; padding:12px 14px; background:#181c24; border:1px solid #262b35; border-radius:3px; color:var(--paper); font-size:14px; margin-bottom:26px;}
+  .drop{border:2px dashed #3c4551; border-radius:5px; padding:44px 20px; text-align:center; margin-bottom:12px;}
+  .drop .main{font-size:14px; color:var(--paper); margin-bottom:6px;}
+  .drop .sub{font-family:'JetBrains Mono',monospace; font-size:11px; color:#6b7280;}
+  .file-attached{background:#181c24; border:1px solid var(--brass); border-radius:4px; padding:14px 16px; display:flex; justify-content:space-between; align-items:center; font-size:13px; margin-bottom:12px;}
+  .file-attached .name{font-family:'JetBrains Mono',monospace; color:var(--paper);}
+  .file-attached .meta{color:#8a90a0; font-size:11px;}
+  .note{font-size:12.5px; color:#8a90a0; line-height:1.6; margin-bottom:28px;}
+  .btn-primary{width:100%; background:var(--signal); color:var(--paper); border:none; padding:14px; font-weight:600; font-size:13.5px; letter-spacing:.03em; text-transform:uppercase; border-radius:3px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="title">New Project</div>
+  <label>Project title</label>
+  <input type="text" value="Midnight in Halcyon">
+
+  <label>Screenplay</label>
+  <div class="file-attached">
+    <div>
+      <div class="name">midnight_in_halcyon_draft3.pdf</div>
+      <div class="meta">108 pages · 2.4 MB</div>
+    </div>
+    <div class="meta">✕ remove</div>
+  </div>
+  <div class="note">Vérité will parse your script into scenes, then research every factual claim it finds against real, cited sources.</div>
+  <button class="btn-primary">Start processing</button>
+</div>
+</body>
+</html>

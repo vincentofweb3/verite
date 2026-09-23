@@ -1,0 +1,1 @@
+"""Vérité application package."""

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vérité — Landing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#12151B; --paper:#EDE7D9; --signal:#C1272D; --brass:#B08D57; --slate:#3C4551; --verified:#4F7942; }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--ink); color:var(--paper); font-family:'Inter',sans-serif;}
+  nav{display:flex; justify-content:space-between; align-items:center; padding:26px 56px; border-bottom:1px solid #262b35;}
+  .logo{font-family:'Fraunces',serif; font-weight:700; font-size:19px; letter-spacing:.02em;}
+  .nav-links a{color:#9aa0ac; text-decoration:none; font-size:13px; margin-left:28px;}
+  .cta-nav{background:var(--signal); color:var(--paper); padding:9px 16px; border-radius:3px; font-size:13px; font-weight:600;}
+  .hero{padding:90px 56px 60px; max-width:920px;}
+  .hero h1{font-family:'Fraunces',serif; font-weight:700; font-size:56px; line-height:1.05; margin:0 0 22px;}
+  .hero p{font-size:17px; color:#b6bac3; max-width:560px; line-height:1.6; margin:0 0 34px;}
+  .hero-ctas{display:flex; gap:14px; margin-bottom:70px;}
+  .btn-primary{background:var(--signal); color:var(--paper); border:none; padding:13px 22px; font-weight:600; font-size:13.5px; letter-spacing:.03em; text-transform:uppercase; border-radius:3px;}
+  .btn-secondary{background:transparent; color:var(--paper); border:1px solid #3c4551; padding:13px 22px; font-weight:600; font-size:13.5px; letter-spacing:.03em; text-transform:uppercase; border-radius:3px;}
+  .demo-card{background:#181c24; border:1px solid #262b35; border-radius:6px; padding:22px 26px; max-width:640px; font-family:'JetBrains Mono',monospace; font-size:13px;}
+  .demo-line{color:#8a90a0; margin-bottom:10px;}
+  .stamp{display:inline-block; border:2px solid var(--signal); color:var(--signal); border-radius:3px; padding:2px 9px; font-weight:600; letter-spacing:.05em; transform:rotate(-3deg); font-size:11px; margin-left:4px;}
+  .process{padding:0 56px 90px; display:grid; grid-template-columns:repeat(3,1fr); gap:28px; max-width:1040px;}
+  .stage{border-top:2px solid var(--brass); padding-top:18px;}
+  .stage-label{font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--brass); margin-bottom:8px;}
+  .stage h3{font-family:'Fraunces',serif; font-size:20px; margin:0 0 8px;}
+  .stage p{font-size:13.5px; color:#9aa0ac; line-height:1.6; margin:0 0 12px;}
+  .stage .example{font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#6b7280; background:#14181f; padding:8px 10px; border-radius:3px;}
+  footer{border-top:1px solid #262b35; padding:24px 56px; display:flex; justify-content:space-between; font-size:12px; color:#6b7280;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">VÉRITÉ</div>
+  <div class="nav-links">
+    <a href="#">How it works</a>
+    <a href="#">Repo</a>
+    <span class="cta-nav">Start a project</span>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Ground every scene in truth.</h1>
+  <p>Continuity errors and unverified facts cause reshoots. Vérité reads your screenplay, builds its Story Bible, and checks every factual claim against real, cited sources — before the camera rolls.</p>
+  <div class="hero-ctas">
+    <button class="btn-primary">Start a project</button>
+    <button class="btn-secondary">See how it works</button>
+  </div>
+
+  <div class="demo-card">
+    <div class="demo-line">DANA: I called him from the car — on the car phone, the one Marcus installed himself...</div>
+    <div>"Car phone" self-installed, 1987 <span class="stamp">✕ FLAGGED</span></div>
+  </div>
+</div>
+
+<div class="process">
+  <div class="stage">
+    <div class="stage-label">01 — Parse</div>
+    <h3>Script → scenes</h3>
+    <p>Your screenplay is broken into structured scenes, characters, props, and locations.</p>
+    <div class="example">42 scenes extracted</div>
+  </div>
+  <div class="stage">
+    <div class="stage-label">02 — Ground</div>
+    <h3>Claims → sources</h3>
+    <p>Every factual, historical, or technical claim is checked against live, cited web sources.</p>
+    <div class="example">3 sources retrieved · Contradicted</div>
+  </div>
+  <div class="stage">
+    <div class="stage-label">03 — Flag</div>
+    <h3>Risks → your desk</h3>
+    <p>Continuity breaks and clearance risks are ranked by production impact, not buried in a report.</p>
+    <div class="example">1 high-severity flag</div>
+  </div>
+</div>
+
+<footer>
+  <span>Built for Google Cloud's Agentic Cinema Hackathon — Parallel track</span>
+  <span>github.com/yourteam/verite-app</span>
+</footer>
+</body>
+</html>

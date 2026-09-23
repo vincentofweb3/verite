@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vérité — Processing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#12151B; --paper:#EDE7D9; --signal:#C1272D; --brass:#B08D57; --slate:#3C4551; --verified:#4F7942; }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--ink); color:var(--paper); font-family:'Inter',sans-serif;}
+  .app{display:grid; grid-template-columns:1fr 340px; min-height:100vh;}
+  main{padding:44px 56px;}
+  .page-title{font-family:'Fraunces',serif; font-weight:700; font-size:30px; margin:0 0 6px;}
+  .page-sub{color:#9aa0ac; font-size:14px; margin:0 0 28px;}
+  .stages{display:flex; gap:8px; margin-bottom:32px;}
+  .stage{flex:1; text-align:center; padding:10px 6px; font-family:'JetBrains Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; border-bottom:3px solid #262b35; color:#6b7280;}
+  .stage.done{border-bottom-color:var(--verified); color:#8fbf7d;}
+  .stage.active{border-bottom-color:var(--signal); color:var(--paper);}
+  .log{background:#0d1015; border:1px solid #262b35; border-radius:4px; padding:22px 24px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.9;}
+  .log .t{color:#5e6472; margin-right:14px;}
+  .log .agent{color:var(--brass);}
+  .log .arrow{color:#4a5568; margin:0 8px;}
+  .log .contradicted{color:var(--signal);}
+  .log .verified{color:#8fbf7d;}
+  aside{border-left:1px solid #262b35; padding:44px 28px;}
+  .feed-label{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#8a90a0; margin-bottom:18px;}
+  .stamp{display:inline-block; border:2px solid; border-radius:3px; padding:3px 10px; font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; letter-spacing:.06em; transform:rotate(-3deg); margin-bottom:6px;}
+  .stamp.verified{color:#8fbf7d; border-color:#8fbf7d;}
+  .stamp.flagged{color:var(--signal); border-color:var(--signal);}
+  .feed-item{margin-bottom:22px; padding-bottom:18px; border-bottom:1px dashed #262b35;}
+  .feed-scene{font-size:12px; color:#9aa0ac; margin-bottom:6px;}
+  .feed-source{font-family:'JetBrains Mono',monospace; font-size:11px; color:#6b7280;}
+</style>
+</head>
+<body>
+<div class="app">
+  <main>
+    <h1 class="page-title">Processing — Midnight in Halcyon</h1>
+    <p class="page-sub">42 scenes · running the agent pipeline</p>
+    <div class="stages">
+      <div class="stage done">Parse</div>
+      <div class="stage done">Extract</div>
+      <div class="stage active">Research</div>
+      <div class="stage">Continuity</div>
+      <div class="stage">Synthesis</div>
+    </div>
+    <div class="log">
+      <div><span class="t">09:14:02</span><span class="agent">Script Parser Agent</span><span class="arrow">→</span>42 scenes extracted</div>
+      <div><span class="t">09:14:06</span><span class="agent">Entity Extraction Agent</span><span class="arrow">→</span>118 entities, 27 claims flagged</div>
+      <div><span class="t">09:14:09</span><span class="agent">Research Agent</span><span class="arrow">→</span>querying Parallel Search: "1987 car phone plausibility"</div>
+      <div><span class="t">09:14:11</span><span class="agent">Research Agent</span><span class="arrow">→</span>3 sources retrieved, verdict: <span class="contradicted">Contradicted</span></div>
+      <div><span class="t">09:14:13</span><span class="agent">Research Agent</span><span class="arrow">→</span>querying Parallel Search: "Boeing 727 cockpit crew size, 1987"</div>
+      <div><span class="t">09:14:15</span><span class="agent">Research Agent</span><span class="arrow">→</span>2 sources retrieved, verdict: <span class="verified">Supported</span></div>
+      <div><span class="t">09:14:16</span><span class="agent">Research Agent</span><span class="arrow">→</span>querying Parallel Search: 22 claims remaining…</div>
+    </div>
+  </main>
+  <aside>
+    <div class="feed-label">Wire Feed — Live Citations</div>
+
+    <div class="feed-item">
+      <span class="stamp flagged">✕ FLAGGED</span>
+      <div class="feed-scene">Scene 14 — car phone reference</div>
+      <div class="feed-source">telecomhistory.org · retrieved 09:14:11</div>
+    </div>
+
+    <div class="feed-item">
+      <span class="stamp verified">✓ VERIFIED</span>
+      <div class="feed-scene">Scene 15 — cockpit crew detail</div>
+      <div class="feed-source">faa.gov/archive · retrieved 09:14:15</div>
+    </div>
+
+  </aside>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vérité — Export</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#12151B; --paper:#EDE7D9; --signal:#C1272D; --brass:#B08D57; }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--ink); color:var(--paper); font-family:'Inter',sans-serif; display:flex; align-items:center; justify-content:center; min-height:100vh;}
+  .wrap{width:520px;}
+  .title{font-family:'Fraunces',serif; font-weight:700; font-size:26px; margin:0 0 30px; text-align:center;}
+  label{display:block; font-size:12px; color:#9aa0ac; margin-bottom:8px; font-weight:600; text-transform:uppercase; letter-spacing:.05em;}
+  .options{display:flex; gap:12px; margin-bottom:26px;}
+  .option{flex:1; border:1px solid #262b35; background:#181c24; border-radius:4px; padding:14px; text-align:center; font-size:13px; cursor:pointer;}
+  .option.selected{border-color:var(--brass); background:#1e232c;}
+  .scope{margin-bottom:30px;}
+  .scope select{width:100%; padding:11px 12px; background:#181c24; border:1px solid #262b35; border-radius:3px; color:var(--paper); font-size:13.5px;}
+  .btn-primary{width:100%; background:var(--signal); color:var(--paper); border:none; padding:14px; font-weight:600; font-size:13.5px; letter-spacing:.03em; text-transform:uppercase; border-radius:3px; margin-bottom:16px;}
+  .share-row{display:flex; gap:8px; align-items:center;}
+  .share-link{flex:1; background:#0d1015; border:1px solid #262b35; border-radius:3px; padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#8a90a0;}
+  .copy{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--brass); border:1px solid var(--brass); padding:9px 12px; border-radius:3px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="title">Export &amp; Share</div>
+  <label>Format</label>
+  <div class="options">
+    <div class="option selected">Continuity Binder (PDF)</div>
+    <div class="option">Structured JSON</div>
+    <div class="option">CSV</div>
+  </div>
+  <div class="scope">
+    <label>Scope</label>
+    <select>
+      <option>Full Story Bible</option>
+      <option>Fact-Check Report only</option>
+      <option>Continuity &amp; Rights only</option>
+    </select>
+  </div>
+  <button class="btn-primary">Download PDF</button>
+  <label>Shareable link (read-only, expires in 7 days)</label>
+  <div class="share-row">
+    <div class="share-link">verite.app/s/mh-4k9x2p</div>
+    <div class="copy">Copy</div>
+  </div>
+</div>
+</body>
+</html>
